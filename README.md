@@ -28,19 +28,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.tree import DecisionTreeRegressor
 
-
 data = pd.read_csv("C:/Users/acer/Downloads/Salary.csv")
 
 X = data.iloc[:, 1:2].values   
 y = data.iloc[:, 2].values    
-
 
 regressor = DecisionTreeRegressor(random_state=0)
 regressor.fit(X, y)
 
 predicted_salary = regressor.predict([[6.5]])
 print("Predicted Salary:", predicted_salary)
-
 
 X_grid = np.arange(min(X), max(X), 0.01)
 X_grid = X_grid.reshape((len(X_grid), 1))
@@ -51,13 +48,10 @@ plt.title("Decision Tree Regression")
 plt.xlabel("Position Level")
 plt.ylabel("Salary")
 plt.show()
-
-
 ```
 
 ## Output:
 <img width="822" height="564" alt="Screenshot 2026-03-10 085250" src="https://github.com/user-attachments/assets/8b5456ae-6d09-4739-8487-b7faa34f01f3" />
-
 
 ## Result:
 Thus the program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee is written and verified using python programming.
